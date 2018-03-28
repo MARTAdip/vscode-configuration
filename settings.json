@@ -1,0 +1,46 @@
+{
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.minimap.enabled": false,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "explorer.confirmDragAndDrop": false,
+  "workbench.startupEditor": "none",
+  "window.zoomLevel": 0,
+  "files.associations": {
+    "*.asset": "yaml"
+  },
+  "terminal.integrated.scrollback": 5000,
+  "search.exclude": {
+    ".vscode": true,
+  },
+  "gitlens.advanced.telemetry.enabled": false,
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": true
+  },
+  "[csharp]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4
+  },
+  "[javascript]": {},
+  "javascript.referencesCodeLens.enabled": false,
+  "javascript.implicitProjectConfig.checkJs": true,
+  "javascript.validate.enable": false,
+  "npm-intellisense.importES6": true,
+  "npm-intellisense.importQuotes": "'",
+  "npm-intellisense.importLinebreak": ";\r\n",
+  "npm-intellisense.importDeclarationType": "const",
+  "npm-intellisense.packageSubfoldersIntellisense": true,
+  "eslint.autoFixOnSave": true,
+  "[json]": {
+    "editor.formatOnSave": true
+  }
+}

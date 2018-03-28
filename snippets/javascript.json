@@ -1,0 +1,94 @@
+{
+  // eslint
+  "eslint-disable-line": {
+    "prefix": "esl",
+    "body": [
+      "// eslint-disable-line$0"
+    ],
+    "description": "Disable eslint for this line"
+  },
+  "eslint-disable-next-line": {
+    "prefix": "esnl",
+    "body": [
+      "// eslint-disable-next-line$0"
+    ],
+    "description": "Disable eslint for the next line"
+  },
+  // console
+  "console-log": {
+    "prefix": "ll",
+    "body": [
+      "console.log('${1:log}'); // eslint-disable-line$0"
+    ],
+    "description": "Log to console"
+  },
+  "console-log-variable": {
+    "prefix": "lv",
+    "body": [
+      "console.log('${1:variable}: ', ${1:variable}); // eslint-disable-line$0"
+    ],
+    "description": "Log variable to console"
+  },
+  "console-log-variable-stringified": {
+    "prefix": "lvs",
+    "body": [
+      "console.log('${1:variable}: ', JSON.stringify(${1:variable}, null, 2)); // eslint-disable-line$0"
+    ],
+    "description": "Log stringified variable to console"
+  },
+  "flow-log": {
+    "prefix": "lar",
+    "body": [
+      "fuck => {",
+      "  console.log('fuck: ', fuck); // eslint-disable-line",
+      "  return fuck;",
+      "},$0",
+    ],
+    "description": "Log and return"
+  },
+  // lodash
+  "lodash-import": {
+    "prefix": "il",
+    "body": [
+      "import ${1:var} from 'lodash/${1:var}';$0"
+    ],
+    "description": "Import lodash"
+  },
+  "lodash-import-functional": {
+    "prefix": "ifl",
+    "body": [
+      "import f${1:var} from 'lodash/fp/${1:var}';$0"
+    ],
+    "description": "Import functional lodash"
+  },
+  // react
+  "react-component-with-state": {
+    "prefix": "reactC",
+    "body": [
+      "import React, { Component } from 'react';",
+      "import PropTypes from 'prop-types';",
+      "",
+      "",
+      "class ${1:${TM_FILENAME_BASE}} extends Component {",
+      "  static propTypes = {",
+      "  };",
+      "  ",
+      "  static defaultProps = {",
+      "  };",
+      "  ",
+      "  render() {",
+      "    const {",
+      "    } = this.props;",
+      "    ",
+      "    return (",
+      "      <div>",
+      "      </div>",
+      "    );",
+      "  }",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}};$0",
+    ],
+    "description": "React Component with State"
+  },
+}
