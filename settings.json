@@ -8,7 +8,7 @@
   "files.insertFinalNewline": true,
   "explorer.confirmDragAndDrop": false,
   "workbench.startupEditor": "none",
-  "window.zoomLevel": 0,
+  "window.zoomLevel": -1,
   "files.associations": {
     "*.asset": "yaml"
   },
@@ -24,7 +24,8 @@
     "suppressGitVersionWarning": false,
     "suppressLineUncommittedWarning": false,
     "suppressNoRepositoryWarning": false,
-    "suppressResultsExplorerNotice": true
+    "suppressResultsExplorerNotice": true,
+    "suppressShowKeyBindingsNotice": true
   },
   "[csharp]": {
     "editor.formatOnSave": true,
@@ -40,7 +41,24 @@
   "npm-intellisense.importDeclarationType": "const",
   "npm-intellisense.packageSubfoldersIntellisense": true,
   "eslint.autoFixOnSave": true,
+  "eslint.provideLintTask": true,
+  "eslint.options": {
+    "--debug": true
+  },
   "[json]": {
     "editor.formatOnSave": true
-  }
+  },
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "\\.js$",
+        "cmd2": "eslint_d ${file} --fix",
+        "cmd": "cd ./GitHub/gamebook-portal/ & eslint_d ${file} --fix"
+      }
+    ]
+  },
+  "gitlens.historyExplorer.enabled": true,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "editor.snippetSuggestions": "top",
+  "editor.tabCompletion": true
 }
