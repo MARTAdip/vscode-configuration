@@ -53,5 +53,15 @@
     "key": "shift+f12",
     "command": "-editor.action.referenceSearch.trigger",
     "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+  },
+  {
+    "key": "tab",
+    "command": "-acceptSelectedSuggestion",
+    "when": "editorTextFocus && suggestWidgetVisible"
+  },
+  {
+    "key": "tab",
+    "command": "acceptSelectedSuggestion",
+    "when": "editorTextFocus && suggestWidgetVisible && !inSnippetMode"
   }
 ]
