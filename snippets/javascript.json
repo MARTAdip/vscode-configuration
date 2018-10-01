@@ -39,7 +39,7 @@
   "flow-log": {
     "prefix": "lar",
     "body": [
-      "fuck => {",
+      "(fuck) => {",
       "  console.log('fuck: ', fuck); // eslint-disable-line",
       "  return fuck;",
       "},$0",
@@ -90,5 +90,44 @@
       "export default ${1:${TM_FILENAME_BASE}};$0",
     ],
     "description": "React Component with State"
+  },
+  // localization
+  "localization-import": {
+    "prefix": "iloc",
+    "body": [
+      "import withTranslations from 'Locale/withTranslations';",
+      "import { defineMessages } from 'react-intl';$0"
+    ],
+    "description": "Import localization functions"
+  },
+  "named-localization": {
+    "prefix": "naloc",
+    "body": [
+      "const translations = defineMessages({",
+      " label: {",
+      "   id: '${TM_FILENAME_BASE}.label',",
+      "   defaultMessage: '',",
+      " },",
+      "});",
+      "",
+      "const localizedComponent = withTranslations(translations)(${TM_FILENAME_BASE});",
+      "",
+      "export { localizedComponent as ${TM_FILENAME_BASE} };$0",
+    ],
+    "description": "Named localization"
+  },
+  "localization": {
+    "prefix": "defloc",
+    "body": [
+      "const translations = defineMessages({",
+      " label: {",
+      "   id: '${TM_FILENAME_BASE}.label',",
+      "   defaultMessage: '',",
+      " },",
+      "});",
+      "",
+      "export default withTranslations(translations)(${TM_FILENAME_BASE});$0"
+    ],
+    "description": "localization"
   },
 }
